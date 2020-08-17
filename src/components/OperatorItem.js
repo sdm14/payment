@@ -13,13 +13,13 @@ export const OperatorItem = withRouter((props) => {
    const item = operators.find(el => el.id === Number(urlParams.id))
 
    // Адрес указал произвольный, в Request Payload можно увидеть, что отправляется объект
-   const sendData = (formData) => {
-      axios.post('http://localhost:3000/api',
-         { phone: formData.phone, count: formData.count })
-         .then(res => res.data)
-      formData.phone = ''
-      formData.count = ''
-   }
+   // const sendData = (formData) => {
+   //    axios.post('http://localhost:3000/api',
+   //       { phone: formData.phone, count: formData.count })
+   //       .then(res => res.data)
+   //    formData.phone = ''
+   //    formData.count = ''
+   // }
 
 
    return (
