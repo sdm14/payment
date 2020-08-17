@@ -10,7 +10,7 @@ function App(props) {
 
   return (
     <div className="app">
-      <Route path={'/'} exact render={() => <Wrapper />} />
+      <Route path={'/payment'} exact render={() => <Wrapper />} />
       <Route path={'/operator/:id'} render={() => <OperatorItem />} />
     </div>
   );

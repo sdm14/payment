@@ -21,6 +21,10 @@ export const OperatorItem = withRouter((props) => {
    //    formData.count = ''
    // }
 
+   const sendData = (formData) => {
+      console.log(formData)
+   }
+
 
    return (
       <div className="item__wrapper">
