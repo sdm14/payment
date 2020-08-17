@@ -156,14 +156,18 @@ body {
    transition: 0.3s;
    margin: 50px 0;
    opacity: 0;
-   animation: scale 0.5s forwards;
-   animation-delay: 0.5s;
+   animation: fadeUp 0.5s forwards;
+   animation-delay: 1s;
 }
 
 .show__more:hover {
    background: #32a896;
    color: #fff;
    box-shadow: 0 0 0 0 #000;
+}
+
+.mask {
+   color: #000;
 }
 
 @keyframes fadeUp {

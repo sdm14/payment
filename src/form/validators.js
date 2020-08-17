@@ -7,10 +7,11 @@ export const required = (value) => {
 }
 
 export const lengthValue = (value) => {
-   if (value && value.length !== 11) {
-      return '11 цифр'
-   } else {
+   let lastChar = Number(value.slice(-1))
+   if (Number(lastChar)) {
       return undefined
+   } else {
+      return 'не правильный телефон'
    }
 }
 
