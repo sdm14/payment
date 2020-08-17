@@ -17,6 +17,8 @@ export const OperatorItem = withRouter((props) => {
       axios.post('http://localhost:3000/api',
          { phone: formData.phone, count: formData.count })
          .then(res => res.data)
+      formData.phone = ''
+      formData.count = ''
    }
 
 
