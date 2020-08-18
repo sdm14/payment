@@ -2,6 +2,7 @@ import React from 'react'
 import { reduxForm, Field } from 'redux-form'
 import { Input, TelInput } from '../form/forms'
 import { required, lengthValue, minCount, maxCount } from '../form/validators'
+import translate from '../i18n/messages/translate'
 
 const OperatorForm = (props) => {
 
@@ -13,7 +14,7 @@ const OperatorForm = (props) => {
          <div>
             <Field placeholder={"Введите сумму"} name={"count"} component={Input} type={"Number"} validate={[required, minCount, maxCount]} />
          </div>
-         <button type="submit" className="pay__link">Оплатить</button>
+         <button type="submit" className="pay__link">{translate("pay")}</button>
       </form>
    )
 }

@@ -1,8 +1,11 @@
 import mts from '../assets/mts.png'
 import megaphone from '../assets/megaphone2.jpg'
 import beeline from '../assets/beeline.png'
+import { LOCALES } from '../i18n/locales'
 
 const SET_OFFSET = 'SET_OFFSET'
+const CHANGE_TO_ENGLISH_LANGUAGE = 'CHANGE_TO_ENGLISH_LANGUAGE'
+const CHANGE_TO_RUSSIAN_LANGUAGE = 'CHANGE_TO_RUSSUIAN_LANGUAGE'
 
 const initialState = {
    operators: [
@@ -17,11 +20,22 @@ const initialState = {
       { id: 9, name: 'Девятый', imgPath: megaphone },
       { id: 10, name: 'Десятый', imgPath: megaphone }
    ],
-   offset: 3
+   offset: 3,
+   language: LOCALES.RUSSIAN
 }
 
 export const mainReducer = (state = initialState, action) => {
    switch (action.type) {
+      case CHANGE_TO_ENGLISH_LANGUAGE:
+         return {
+            ...state,
+            language: LOCALES.ENGLISH
+         }
+      case CHANGE_TO_RUSSIAN_LANGUAGE:
+         return {
+            ...state,
+            language: LOCALES.RUSSIAN
+         }
       case SET_OFFSET:
          return {
             ...state,
@@ -33,3 +47,5 @@ export const mainReducer = (state = initialState, action) => {
 }
 
 export const setOffset = () => ({ type: SET_OFFSET })
+export const changeToEnglish = () => ({ type: CHANGE_TO_ENGLISH_LANGUAGE })
+export const changeToRussian = () => ({ type: CHANGE_TO_RUSSIAN_LANGUAGE })

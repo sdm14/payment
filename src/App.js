@@ -1,17 +1,18 @@
 import React from 'react';
 import { Wrapper } from './components/Wrapper';
 import './index.css'
-import { Route } from 'react-router-dom';
-import { OperatorItem } from './components/OperatorItem';
+import { I18nProvider, LOCALES } from './i18n'
+import { useSelector } from 'react-redux';
 
 function App(props) {
 
-
+  const language = useSelector(state => state.main.language)
 
   return (
     <div className="app">
-      <Route path={'/payment'} exact render={() => <Wrapper />} />
-      <Route path={'/operator/:id'} render={() => <OperatorItem />} />
+      <I18nProvider locale={language}>
+        <Wrapper />
+      </I18nProvider>
     </div>
   );
 }
