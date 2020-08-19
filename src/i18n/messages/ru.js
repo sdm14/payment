@@ -6,6 +6,6 @@ export default {
       "go-to-pay": "Перейти к оплате",
       "show-more": "Показать еще",
       "list-of-operators": "Список операторов",
-      "amount": "Enter the amount"
+      "loading": "Загрузка"
    }
 }

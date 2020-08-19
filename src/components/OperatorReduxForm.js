@@ -14,7 +14,7 @@ const OperatorForm = (props) => {
          <div>
             <Field placeholder={"Введите сумму"} name={"count"} component={Input} type={"Number"} validate={[required, minCount, maxCount]} />
          </div>
-         <button type="submit" className="pay__link">{translate("pay")}</button>
+         <button type="submit" className={props.isSubmit ? "pay__link submitt" : "pay__link"} disabled={props.isSubmit}>{props.isSubmit ? translate("loading") : translate("pay")}</button>
       </form>
    )
 }

@@ -20,8 +20,8 @@ export const Wrapper = (props) => {
 
    return (
       <div className="header__wrapper">
-         <LanguageButtons />
          <div className="header__title">{translate('list-of-operators')}</div>
+         <LanguageButtons />
          <div className="operator__wrapper">
             {arrayItems.map(el => <OperatorList el={el} key={el.id} />)}
          </div>
